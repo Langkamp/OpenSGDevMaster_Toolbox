@@ -112,19 +112,19 @@ UInt32 MField<ValueT, iNamespace, AllocT>::getSize(void) const
 template <class ValueT, Int32 iNamespace, class AllocT> inline
 UInt32 MField<ValueT, iNamespace, AllocT>::getCardinality(void) const
 {
-    return _fieldType.getCardinality();
+    return getClassType().getCardinality();
 }
 
 template <class ValueT, Int32 iNamespace, class AllocT> inline
 UInt32 MField<ValueT, iNamespace, AllocT>::getClass(void) const
 {
-    return _fieldType.getClass();
+    return getClassType().getClass();
 }
 
 template <class ValueT, Int32 iNamespace, class AllocT> inline
 const FieldType& MField<ValueT, iNamespace, AllocT>::getType(void) const
 {
-    return _fieldType;
+    return getClassType();
 }
 
 
